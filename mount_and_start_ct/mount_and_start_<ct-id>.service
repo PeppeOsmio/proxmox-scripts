@@ -1,0 +1,15 @@
+[Unit]
+Description=Mount PBS Storage and Start Proxmox CT
+After=local-fs.target
+Requires=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/mount_and_start_ct.sh /dev/disk/by-uuid/<device-uuid> <ct-id> <mount-point>
+User=root
+Group=root
+StandardOutput=append:/var/log/mount_and_start_ct_<ct-id>.log
+StandardError=append:/var/log/mount_and_start_ct_<ct-id>.log
+
+[Install]
+WantedBy=multi-user.target

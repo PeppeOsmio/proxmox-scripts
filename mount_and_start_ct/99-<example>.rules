@@ -1,0 +1,1 @@
+SUBSYSTEM=="block", ACTION=="add", ENV{ID_FS_UUID}=="<device-uuid>", RUN+="/bin/systemctl start mount_and_start_ct_<ct-id>.service"
