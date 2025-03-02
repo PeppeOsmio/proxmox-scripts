@@ -29,7 +29,7 @@ echo "Mount successful, waiting for device to stabilize..."
 
 # Retry logic for starting the container
 ATTEMPTS=0
-MAX_ATTEMPTS=20
+MAX_ATTEMPTS=10
 
 while [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do
     sleep 2  # Wait before retrying
