@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# place this in /usr/local/bin/mount_and_start_ct.sh
+
 # Check if all required arguments are provided
 if [ $# -ne 3 ]; then
     echo "Usage: $0 <device> <container-id> <mount-point>"
