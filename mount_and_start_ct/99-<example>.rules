@@ -1,2 +1,2 @@
 SUBSYSTEM=="block", ACTION=="add", ENV{ID_FS_UUID}=="<device-uuid>", RUN+="/bin/systemctl start mount_and_start_ct_<ct-id>.service"
-SUBSYSTEM=="block", ACTION=="remove", ENV{ID_FS_UUID}=="<device-uuid>", RUN+="/usr/local/bin/stop_ct_after_device_disconnect.sh <device-uuid> <ct-id>"
+# SUBSYSTEM=="block", ACTION=="remove", ENV{ID_FS_UUID}=="<device-uuid>", RUN+="/usr/local/bin/stop_ct_after_device_disconnect.sh <device-uuid> <ct-id>"
